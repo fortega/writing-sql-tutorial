@@ -1,0 +1,26 @@
+{
+  "name": "Python + Jupyter + PySpark",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "remoteUser": "vscode",
+  "forwardPorts": [4040, 8888],
+  "portsAttributes": {
+    "4040": { "label": "Spark UI", "onAutoForward": "silent" },
+    "8888": { "label": "Jupyter", "onAutoForward": "silent" }
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "jupyter.notebookFileRoot": "${workspaceFolder}"
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter"
+      ]
+    }
+  }
+}

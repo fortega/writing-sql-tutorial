@@ -1,0 +1,5 @@
+pyspark==4.0.1
+jupyterlab
+ipykernel
+pandas
+pyarrow
